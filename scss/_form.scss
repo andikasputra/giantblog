@@ -1,0 +1,94 @@
+form {
+	.group {
+		display: flex;
+		flex-direction: column;
+		margin-top: 25px;
+		margin-bottom: 15px;
+		label {
+			cursor: pointer;
+			text-transform: uppercase;
+			font-size: $font-size-l;
+			letter-spacing: .2em;
+		}
+		input, select, textarea {
+			font-size: $font-size-m;
+			color: $black;
+			margin-top: 10px;
+			padding: 10px 5px;
+			border-top: none;
+			border-left: none;
+			border-right: none;
+			border-bottom: 1px solid $black;
+			&:focus, &:active {
+				outline: none;
+			}
+		}
+		select, option {
+			background: transparent;
+			font-size: $font-size-m;
+			text-transform: uppercase;
+			letter-spacing: .2em;
+			cursor: pointer;
+		}
+		.checkbox, .radio {
+			label {
+				font-size: $font-size-m;
+				margin-right: 10px;
+				input {
+					border-color: $black;
+				}
+			}
+		}
+		.checkbox input {
+			visibility: hidden;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				width: 10px;
+				height: 10px;
+				border: 1px solid $black;
+				visibility: visible;
+			}
+			&:checked:before {
+				background-color: $black;
+			}
+		}
+		.radio input {
+			visibility: hidden;
+			position: relative;
+			&:before {
+				content: '';
+				position: absolute;
+				border-radius: 50%;
+				width: 10px;
+				height: 10px;
+				border: 1px solid $black;
+				visibility: visible;
+			}
+			&:checked:before {
+				background-color: $black;
+			}
+		}
+		::-webkit-input-placeholder {
+			font-size: $font-size-m;
+			letter-spacing: .2em;
+			text-transform: uppercase;
+		}
+		::-moz-placeholder {
+			font-size: $font-size-m;
+			letter-spacing: .2em;
+			text-transform: uppercase;
+		}
+		:-moz-placeholder {
+			font-size: $font-size-m;
+			letter-spacing: .2em;
+			text-transform: uppercase;
+		}
+		:-ms-input-placeholder {
+			font-size: $font-size-m;
+			letter-spacing: .2em;
+			text-transform: uppercase;
+		}
+	}
+}

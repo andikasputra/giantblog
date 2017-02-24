@@ -1,0 +1,55 @@
+//---------------
+// fonts
+// --------------
+// font family
+$font-family-sans-serif:	"Montserrat", sans-serif;
+$font-family-serif: 		"Lora",serif;
+$font-family-monospace: 	"Courier New",monospace;
+$font-family-base: 			$font-family-sans-serif;
+
+// font size text
+$font-size-base:	1rem;
+$font-size-l:		1.25rem;
+$font-size-m:		.875rem;
+$font-size-s:		.75rem; 
+
+// font size heading
+$font-size-h1: 2.5rem;
+$font-size-h2: 2rem;
+$font-size-h3: 1.75rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1rem;
+
+// font weight
+$font-weight-extra: 800;
+$font-weight-bold: 700;
+$font-weight-semi: 600;
+$font-weight-med: 500;
+$font-weight-reg: 400;
+
+//---------------
+// colors
+//---------------
+// pallete
+$white:		#fff;
+$black:		#000;
+$dark:		#444;
+$blue:		#2980b9;
+$red:		#c0392b;
+$green:		#27ae60;
+$purple:	#8e44ad;
+$orange:	#d35400;
+$yellow:	#f1c40f;
+
+// grayscale
+$gray:			#95a5a6;
+$gray-dark:		#7f8c8d;
+$gray-light:	#bdc3c7;
+$gray-lighter:	#ecf0f1;
+
+
+//-------
+// Grid
+// ------
+$grid-gutter:	30px;

@@ -1,0 +1,16 @@
+table {
+	width: 100%;
+	border-spacing: 0;
+	th, td { padding: 10px 20px; }
+	th {
+		text-align: left;
+		background-color: $black;
+		color: $white;
+		text-transform: uppercase;
+		letter-spacing: .2em;
+		font-size: $font-size-s;
+	}
+	td {
+		border-bottom: 1px solid $black;
+	}
+}

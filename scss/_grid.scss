@@ -1,0 +1,145 @@
+* { box-sizing: border-box; }
+
+//-----------
+// Position
+//-----------
+[class*="fixed-"] {
+	position: fixed;
+	z-index: 9;
+}
+.fixed-top { top: 0;  }
+.fixed-bottom { bottom: 0; }
+
+// container
+.container {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: ($grid-gutter / 2);
+	padding-right: ($grid-gutter / 2);
+	max-width: 100%;
+	// container fluid
+	.fluid {
+		width: 100%;
+	}
+}
+@media (min-width: 576px) {
+	.container {
+		width: 540px;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		width: 1140px;
+	}
+}
+
+//------------
+// Grid
+//------------
+// wrapper
+.grid {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+	margin-right: -($grid-gutter / 2);
+	margin-left: -($grid-gutter / 2);
+
+	&.left-right {
+		justify-content: space-between;
+	}
+	&.center {
+		justify-content: center;
+	}
+}
+
+// item of grid
+[class*="item-"] {
+	position: relative;
+	padding-right: ($grid-gutter / 2);
+	padding-left: ($grid-gutter / 2);
+	min-height: 1px;
+}
+// item responsive
+// for mobile phone
+$i: 1;
+$max: 12;
+$segment: 0;
+@while $i <= $max {
+	.item-#{$i} {
+		$width : 100% / $max + $segment;
+		width: $width;
+		$segment : $width;
+		$i: $i+1;
+	}
+}
+// for tablet
+@media (min-width: 576px) {
+	$i: 1;
+	$max: 12;
+	$segment: 0;
+	@while $i <= $max {
+		.item-s-#{$i} {
+			$width : 100% / $max + $segment;
+			width: $width;
+			$segment : $width;
+			$i: $i+1;
+		}
+	}
+}
+// for laptop
+@media (min-width: 768px) {
+	$i: 1;
+	$max: 12;
+	$segment: 0;
+	@while $i <= $max {
+		.item-m-#{$i} {
+			$width : 100% / $max + $segment;
+			width: $width;
+			$segment : $width;
+			$i: $i+1;
+		}
+	}
+}
+// for desktop
+@media (min-width: 992px) {
+	$i: 1;
+	$max: 12;
+	$segment: 0;
+	@while $i <= $max {
+		.item-l-#{$i} {
+			$width : 100% / $max + $segment;
+			width: $width;
+			$segment : $width;
+			$i: $i+1;
+		}
+	}
+}
+// for large desktop
+@media (min-width: 1200px) {
+	$i: 1;
+	$max: 12;
+	$segment: 0;
+	@while $i <= $max {
+		.item-xl-#{$i} {
+			$width : 100% / $max + $segment;
+			width: $width;
+			$segment : $width;
+			$i: $i+1;
+		}
+	}
+}

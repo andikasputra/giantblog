@@ -1,0 +1,70 @@
+body { font-family: $font-family-base; }
+
+// headings
+h1, h2, h3, h4, h5, h6 { 
+	font-weight: $font-weight-bold;
+	text-transform: uppercase; 
+	letter-spacing: .1em;
+	margin-bottom: 0;
+}
+h1 { font-size: $font-size-h1; }
+h2 { font-size: $font-size-h2; }
+h3 { font-size: $font-size-h3; }
+h4 { font-size: $font-size-h4; }
+h5 { font-size: $font-size-h5; }
+h6 { font-size: $font-size-h6; }
+
+.subheading {
+	text-transform: uppercase;
+	font-size: $font-size-s;
+	letter-spacing: .2em;
+	color: $black;
+	font-family: $font-family-base;
+}
+
+// paragraph
+p, dt, dd, ul, ol, address {
+	font-family: $font-family-serif;
+	color: $dark;
+	line-height: 1.6;
+	letter-spacing: .04em;
+	font-size: $font-size-l;
+}
+
+// link
+a {
+	font-family: $font-family-base;
+	color: $black;
+	text-transform: uppercase;
+}
+
+// code
+code {
+	color: $dark;
+	background-color: $gray-lighter;
+	padding: 20px 30px;
+	display: block;
+	margin: 10px 0;
+	font-family: $font-family-monospace;
+	overflow-x: auto;
+}
+
+// quote
+blockquote {
+	border-left: 2px solid $black;
+	padding: 10px 15px;
+	font-family: $font-family-serif;
+	font-style: italic;
+	font-size: $font-size-l;
+	color: $black;
+	small {
+		display: block;
+		color: $dark;
+	}
+}
+
+// aligns
+.alignleft { text-align: left; }
+.alignnone { text-align: left; }
+.alignright { text-align: right; }
+.aligncenter { text-align: center; }

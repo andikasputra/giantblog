@@ -1,0 +1,25 @@
+@mixin button-color($name,$bg,$hover,$text) {
+	.button-#{$name} {
+		background-color: $bg;
+		color: $text;
+		transition: .2 ease;
+		@if $name == transparent {
+			border: 1px solid #fff;
+		} @else {
+			border: 1px solid $hover;
+		}
+	}
+	.button-#{$name}:hover {
+		background-color: darken($hover, 15);
+		@if $name == white {
+			color: #fff;
+		}
+	}
+}
+@mixin button-size($name,$font,$top-bottom,$left-right,$line-height) {
+	.button.#{$name} {
+		font-size: $font+px;
+		padding: $top-bottom+px $left-right+px !important;
+		line-height: $line-height+px !important;
+	}
+}
