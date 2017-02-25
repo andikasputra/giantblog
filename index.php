@@ -38,8 +38,12 @@
 							/* start the loop */
 							while ( have_posts() ) : the_post();
 								get_template_part( 'template-parts/content', get_post_format() );
-							endwhile;
-
+							endwhile; ?>
+							<div class="grid left-right pagination">
+								<div class="nav-previous"><?php previous_posts_link( '<< Newer Posts' ); ?></div>
+								<div class="nav-next"><?php next_posts_link( 'Older Posts >>' ); ?></div>
+							</div>
+						<?php
 						else :
 							get_template_part( 'template-parts/content', 'none' );
 						endif; ?>

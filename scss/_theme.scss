@@ -24,10 +24,18 @@
 article {
 	margin-bottom: 60px;
 }
+p.date {
+	margin-top: 0;
+	font-size: 14px;
+	margin-bottom: 40px;
+}
 
 .content-tag {
-	margin-top: 20px;
-	border-top: 1px solid #ddd;
+	display: flex;
+	.icon-pricetags {
+		margin-top: 30px;
+		margin-right: 10px;
+	}
 	ul.tags {
 		list-style: none;
 		padding: 0;
@@ -45,7 +53,148 @@ article {
 	}
 }
 
+.entry-content {
+	border-bottom: 1px solid #ddd;
+	a {
+		color: $black;
+		font-size: $font-size-m;
+	}
+}
+
+.entry-footer {
+	.author {
+		margin-top: 80px;
+		border-top: 1px solid #e9e9e9;
+		.author-figure {
+			text-align: center;
+			margin: -42px auto 0 auto;
+			padding: 10px;
+			border-radius: 50%;
+			border: 1px solid #e9e9e9;
+			background-color: #fff;
+			width: 84px;
+			img {
+				border-radius: 50%;
+			}
+		}
+		.author-meta {
+			margin-top: -40px;
+			p {
+				margin-top: 10px;
+				margin-bottom: 10px;
+				strong {
+					font-family: $font-family-sans-serif;
+				}
+			}
+			.author-name {
+				color: #333;
+				text-decoration: none;
+			}
+		}
+		.share {
+			text-align: center;
+			button {
+				background: none;
+				border: none;
+				outline: none;
+				i {
+					font-size: 24px;
+				}
+			}
+		}
+	}
+}
+
 .site-footer {
 	background-color: #eee;
 	margin-top: 60px;
+}
+
+/**
+ * pagination
+ */
+.pagination a {
+	text-decoration: none;
+	font-size: $font-size-s;
+	display: inline-block;
+	padding: 10px 20px;
+	border: 1px solid $black;
+	transition: ease .2s;
+	&:hover {
+		background-color: $black;
+		color: $white;
+	}
+}
+
+/**
+ * related posts
+ */
+.related-posts {
+	.related-item {
+		margin-top: 10px;
+		position: relative;
+		height: 200px;
+		.img {
+			img {
+				height: 200px;
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+		.text {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			padding: 20px;
+			bottom: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			left: 0;
+			background: linear-gradient(transparent, rgba(0,0,0,0.7));
+			h5 {
+				font-size: $font-size-l;
+				a {
+					color: $white;
+				}
+			}
+		}
+	}
+}
+
+/**
+ * comment area
+ */
+ol.comment-list {
+	list-style: none;
+	padding: 0;
+	li:not(:last-child) {
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 40px;
+	}
+}
+.comment-body {
+	.comment-meta {
+		.comment-author {
+			img {
+				border-radius: 50%;
+				vertical-align: middle;
+				margin-right: 10px;
+			}
+		}
+		.comment-metadata {
+			margin-top: -10px;
+			a {
+				font-size: $font-size-s;
+				margin-left: 48px;
+				text-decoration: none;
+				color: #999;
+			}
+		}
+	}
+	.reply {
+		a {
+			font-size: $font-size-m;
+		}
+	}
 }

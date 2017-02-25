@@ -10,7 +10,7 @@ form {
 			font-size: $font-size-l;
 			letter-spacing: .2em;
 		}
-		input, select, textarea {
+		input:not([type="submit"]), select, textarea {
 			font-size: $font-size-m;
 			color: $black;
 			margin-top: 10px;

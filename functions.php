@@ -54,7 +54,7 @@ add_action( 'after_setup_theme', 'giantblog_setup' );
  * Excerpt
  */
 function giantblog_excerpt_more( $more ) {
-	return sprintf( ' <a class="read-more" href="%1$s">%2$s</a>', get_permalink( get_the_ID() ), __( 'Read More', 'giantblog' ));
+	return " >>";
 }
 add_filter( 'excerpt_more', 'giantblog_excerpt_more' );
 
@@ -65,7 +65,7 @@ add_filter( 'excerpt_more', 'giantblog_excerpt_more' );
  * @return int (Maybe) modified excerpt length.
  */
 function giantblog_custom_excerpt_length( $length ) {
-    return 15;
+    return 20;
 }
 add_filter( 'excerpt_length', 'giantblog_custom_excerpt_length', 999 );
 
